@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Live Cricket Scorecard"
+        android:textColor="#1A1A1A"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Scorecard Display Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="24dp"
+        app:cardBackgroundColor="#1E1E1E">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvTeamName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="India Batting"
+                android:textColor="#B0BEC5"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Runs / Wickets -->
+            <TextView
+                android:id="@+id/tvScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/0"
+                android:textColor="@android:color/white"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Overs -->
+            <TextView
+                android:id="@+id/tvOvers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Overs: 0.0"
+                android:textColor="#00E676"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Scoring Action Buttons Grid -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false">
+
+        <Button
+            android:id="@+id/btn1Run"
+            style="@style/ScoreButtonStyle"
+            android:text="+1 Run" />
+
+        <Button
+            android:id="@+id/btn2Runs"
+            style="@style/ScoreButtonStyle"
+            android:text="+2 Runs" />
+
+        <Button
+            android:id="@+id/btn3Runs"
+            style="@style/ScoreButtonStyle"
+            android:text="+3 Runs" />
+
+        <Button
+            android:id="@+id/btn4Runs"
+            style="@style/ScoreButtonStyle"
+            android:text="4 (Boundary)"
+            android:backgroundTint="#2979FF" />
+
+        <Button
+            android:id="@+id/btn6Runs"
+            style="@style/ScoreButtonStyle"
+            android:text="6 (Sixer)"
+            android:backgroundTint="#00C853" />
+
+        <Button
+            android:id="@+id/btnWicket"
+            style="@style/ScoreButtonStyle"
+            android:text="Wicket"
+            android:backgroundTint="#D32F2F" />
+
+        <Button
+            android:id="@+id/btnWide"
+            style="@style/ScoreButtonStyle"
+            android:text="Wide / Extra"
+            android:backgroundTint="#FF9100" />
+
+        <Button
+            android:id="@+id/btnReset"
+            style="@style/ScoreButtonStyle"
+            android:text="Reset Match"
+            android:backgroundTint="#616161"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill" />
+
+    </GridLayout>
+
+</LinearLayout>
